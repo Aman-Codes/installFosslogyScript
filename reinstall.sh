@@ -1,13 +1,18 @@
 #! /bin/bash
 
 # run 
-# chmod +x FILENAME.sh
+# chmod +x reinstall.sh
 # to make this file executable
 
+# Start apache and postgresql
 sudo service apache2 start
 sudo service postgresql start
+
+# move inside the fossology folder
 cd ..
 cd fossology
+
+# run all installation scripts
 sudo utils/fo-cleanold
 sudo utils/fo-installdeps
 make
